@@ -1,7 +1,14 @@
 import random
 
 class Tilbehor:
-
+    """
+    Attributter:
+        navn (str): Navnet på tilbehøret.
+        beskyttelse (int): Hvor mye skade som reduseres.
+        skade (int): Ekstra skade tilbehøret gir.
+        gull (int): Ekstra gull tilbehøret gir.
+        venn_med_hekser (bool): Sjekker om heksene er vennlige.
+    """
     def __init__(self, navn, skade=0, beskyttelse=0, gull=0, venn_med_hekser=False):
         self._navn = navn
         self._skade = skade
@@ -25,7 +32,13 @@ class Tilbehor:
         return self._venn_med_hekser
 
 class Karakter:
-
+    """
+    Attributter:
+        navn (str): Navnet på karakteren.
+        liv (int): Karakterens nåværende liv.
+        maks_liv (int): Karakterens maksimale liv.
+        skade (int): Hvor mye skade karakteren gjør.
+    """
     def __init__(self, navn, liv, skade):
         self._navn = navn
         self._liv = liv
@@ -58,6 +71,12 @@ class Karakter:
 
 
 class Spiller(Karakter):
+    """
+    Attributter:
+        tilbehor (Tilbehor): Tilbehøret spilleren har valgt.
+        gull (int): Hvor mye gull spilleren har.
+        helsedrikker (int): Antall helsedrikker spilleren har.
+    """
 
     def __init__(self, navn, tilbehor):
         super().__init__(navn, 100, 15)
@@ -126,4 +145,9 @@ class Spiller(Karakter):
 
 
 class Fiende(Karakter):
+    class Fiende(Karakter):
+    """
+    Representerer fiendene spilleren møter i spillet.
+    Klassen arver egenskaper og metoder fra Karakter.
+    """
     pass

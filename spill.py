@@ -6,10 +6,16 @@ from omrade import Omrade
 
 class Spill:
     """
-    Hovedklassen for spillet Rødhette.
-
-    Klassen styrer hele spillet, inkludert menyer,
-    områder, NPC-er, oppdrag, kamper og avslutning.
+    Attributter:
+        spiller (Spiller): Spilleren i spillet.
+        fortsetter (bool): Sjekker om spillet skal fortsette.
+        omrade (str): Området spilleren befinner seg i.
+        har_ringoppdrag (bool): Om ringoppdraget er aktivt.
+        har_funnet_ring (bool): Om spilleren har funnet ringen.
+        har_beseiret_ulven (bool): Om ulven er beseiret.
+        omrader (dict): Områdene i spillet.
+        marta (NPC): NPC-en Marta.
+        heksa (NPC): NPC-en Heksen.
     """
 
     def __init__(self):

@@ -1,5 +1,9 @@
 class Omrade:
-
+    """
+    Attributter:
+        navn (str): Navnet på området.
+        beskrivelse (str): Beskrivelsen av området.
+    """
     def __init__(self, navn, beskrivelse):
         self._navn = navn
         self._beskrivelse = beskrivelse
